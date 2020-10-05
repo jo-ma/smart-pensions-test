@@ -1,0 +1,7 @@
+.terraform*
+.pytest_cache
+.vscode
+__pycache__
+kubeconfig_smart-pension-reasons
+terraform.tfstate
+terraform.tfstate.backup
