@@ -63,14 +63,16 @@ api_endpoint = a8d45defee8d34afc9c51a2fa1e0a8ae-478952727.us-east-1.elb.amazonaw
 
 - Deployment can take approximately 20 minutes, the majority accounted for by provisioning the EKS cluster and RDS instance.  
 - The docker image is hosted in an open, ECR repo.  If you rebuild and push it do a different repo you will need to update the app_image variable to the new location.  
-- If you want to access the kubernetes cluster using kubectl, you can copy the config to your kubectl config and then run any kubectl command.  
+- If you want to interact with the kubernetes cluster using kubectl, you can copy the config to your kubectl config and then run any kubectl command.  
 ```bash
 cp kubeconfig_smart-pension-reasons ~/.kube/config
 ```
 
 ### Demo
 
-There is a small demo available that posts some data to the API service, then gets the data from the service and prints in a user friendly fashion.  
+There is a small demo available that posts some data to the API service, then gets the data from the service and prints it in a user friendly fashion.  
+
+The demo script requires Python 3.8 and utilizes the [requests library](https://requests.readthedocs.io/en/master/).  I use [pipenv](https://pypi.org/project/pipenv/) to manage Python virtual environments, if you have it installed you can execute this script from the virtual environment shell.
 
 To run the demo follow these instructions:
 
